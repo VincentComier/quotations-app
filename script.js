@@ -1,6 +1,8 @@
 const form = document.getElementById("form")
-console.log("form")
+console.log(form)
+console.log(count)
 
+let quoteCount = Number(0)
 
 form.addEventListener("submit", (event) => {
     event.preventDefault()
@@ -12,6 +14,10 @@ form.addEventListener("submit", (event) => {
 })
 
 function addQuote(text, author) {
+    quoteCount += 1
+    document.getElementById("count")
+    count.innerText=quoteCount
+
     let citation = document.createElement("p")
     citation.classList.add("text")
     citation.innerText = text
