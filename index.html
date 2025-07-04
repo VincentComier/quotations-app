@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Titre pour le document</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer type = "module" src="script.js"></script>
+
 </head>
 <body>
     <h1>Mes citations</h1>
@@ -12,9 +15,15 @@
     <hr>
     <form id = "form">
         <label>
-        <input id = "citations">
-        <input id = "auteur/rice">
+        <input type="text" id = "citations">
+        <input type="text" id = "auteur/rice">
         <button id = "submit">soumettre</button>
+        <div id = "quote-list">
+            <div class = "quote">
+                <p class = "text">Citation : "On ne naît pas femme, on le devient."</p>
+                <p class = "author">Simone de Beauvoir</p>
+            </div>
+        </div>
         </label>
     </form>
     
