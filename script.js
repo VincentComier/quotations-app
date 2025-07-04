@@ -1,8 +1,30 @@
 const form = document.getElementById("form")
-const text = document.getElementById("citations")
-const author = document.getElementById("auteur/rice")
+console.log("form")
 
-console.log("c'est l'auteur:" , author)
-console.log("c'est le text:" ,text)
 
-form.addEventListener("click", () => {
+form.addEventListener("submit", (event) => {
+    event.preventDefault()
+
+    const text = document.getElementById("citations").value
+    const author = document.getElementById("author").value
+    console.log(text, author)
+    addQuote(text, author)
+})
+
+function addQuote(text, author) {
+    let citation = document.createElement("p")
+    citation.classList.add("text")
+    citation.innerText = text
+
+    let auteur = document.createElement("p")
+    auteur.classList = "author"
+    auteur.innerText = author
+
+    let DivQuote = document.createElement("div")
+    DivQuote.classList = "quote"
+    DivQuote.appendChild(citation)
+    DivQuote.appendChild(auteur)
+
+    let QuoteList = document.getElementById("quote-list")
+    QuoteList.appendChild(DivQuote)    
+}
